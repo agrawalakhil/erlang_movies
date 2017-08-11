@@ -80,7 +80,7 @@ When the request is authorized, the result of the API is converted to JSON. A re
                    | {error, missing_fields}        | Fields missing in the request
       reserve      | {error, not_exists}            | Movie was not registered
                    | {error, not_allowed}           | Reservation is not allowed
-				   | {error, not_available}         | Seat not available for movie
+                   | {error, not_available}         | Seat not available for movie
                    | {error, Error}                 | Reservation failed
      --------------+--------------------------------+-------------------------------
                    | {ok,                           | Retrieval was successful
