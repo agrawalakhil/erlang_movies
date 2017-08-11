@@ -77,22 +77,22 @@ When the request is authorized, the result of the API is converted to JSON. A re
                    | {error, Error}                 | Registration failed
      --------------+--------------------------------+-------------------------------
                    | ok                             | Reservation was successful
-				   | {error, missing_fields}        | Fields missing in the request
+                   | {error, missing_fields}        | Fields missing in the request
       reserve      | {error, not_exists}            | Movie was not registered
                    | {error, not_allowed}           | Reservation is not allowed
 				   | {error, not_available}         | Seat not available for movie
                    | {error, Error}                 | Reservation failed
      --------------+--------------------------------+-------------------------------
                    | {ok,                           | Retrieval was successful
-                   				   |  {"imdbId": "tt0111161",       | IMDB movie identifier
-				   |   "screenId": "screen_123456", | Externally managed identifier
-				   |   "movieTitle": "The Movie",   | Movie title
-				   |   "availableSeats": 100,       | Total seats available
-				   |   "reservedSeats": 50          | Total seats reserved
-				   |  }                             |
-	               | }                              |
-			       | {error, missing_fields}        | Fields missing in the request
-	  retrieve	   | {error, not_exists}            | Movie was not registered
+                   |  {"imdbId": "tt0111161",       | IMDB movie identifier
+                   |   "screenId": "screen_123456", | Externally managed identifier
+                   |   "movieTitle": "The Movie",   | Movie title
+                   |   "availableSeats": 100,       | Total seats available
+                   |   "reservedSeats": 50          | Total seats reserved
+                   |  }                             |
+                   | }                              |
+                   | {error, missing_fields}        | Fields missing in the request
+      retrieve     | {error, not_exists}            | Movie was not registered
                    | {error, not_allowed}           | Retrieval is not allowed
                    | {error, Error}                 | Retrieval failed
      --------------+--------------------------------+-------------------------------
