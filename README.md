@@ -20,7 +20,7 @@ Clean run of the tests or specific suite
 
 To run the application
 
-* `$ erl -pa ebin -pa deps/cowboy/ebin/ -pa deps/cowlib/ebin/ -pa deps/ranch/ebin/`
+* `$ erl -pa ebin -pa deps/cowboy/ebin/ -pa deps/cowlib/ebin/ -pa deps/ranch/ebin/ -pa deps/jsx/ebin`
 * `application:ensure_all_started(movie).`
 * `$ curl http://localhost:8080/`
 
