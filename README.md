@@ -8,19 +8,21 @@ Following functionalities are implemented
 
 Unit Tests are provided for all the code modules to run and test. To compile, run the tests and examples, following steps needs to be followed
 
-`$ install erlang`
-`$ rebar get-deps`
-`$ rebar compile`
-`$ rebar eunit`
+* `$ install erlang`
+* `$ rebar get-deps`
+* `$ rebar compile`
+* `$ rebar eunit`
 
 Clean run of the tests or specific suite
-`$ rebar get-deps clean compile eunit`
-`$ rebar clean compile eunit suite=movie_server`
+
+* `$ rebar get-deps clean compile eunit`
+* `$ rebar clean compile eunit suite=movie_server`
 
 To run the application
-`$ erl -pa ebin -pa deps/cowboy/ebin/ -pa deps/cowlib/ebin/ -pa deps/ranch/ebin/`
-`application:ensure_all_started(movie).`
-`$ curl http://localhost:8080/`
+
+* `$ erl -pa ebin -pa deps/cowboy/ebin/ -pa deps/cowlib/ebin/ -pa deps/ranch/ebin/`
+* `application:ensure_all_started(movie).`
+* `$ curl http://localhost:8080/`
 
 API
 Following API end points are implemented
@@ -41,7 +43,7 @@ To call the API using akhil@example.net:secret as basic authentication.
 When the request is authorized, the result of the API is converted to JSON. A reply from the server could look like this:
 
     HTTP/1.1 200 OK
-    Content-Length: 54
+    Content-Length: 4
     Content-Type: application/json
      
     "ok"
