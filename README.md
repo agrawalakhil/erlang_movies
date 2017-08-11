@@ -63,10 +63,6 @@ When the request is authorized, the result of the API is converted to JSON. A re
       retrieve        | screenId       | Externally managed identifier of
                       |                | when and where the movie is screened 
      -----------------+----------------+---------------------------------------
-      *               | key            | Key used for authorizing the request
-     -----------------+----------------+---------------------------------------
-
-     *  - the key can be used to all of the above
 
 # Responses
 
