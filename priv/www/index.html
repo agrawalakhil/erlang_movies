@@ -1,0 +1,135 @@
+<html>
+  <body>
+    <h2>Requests</h2>
+    <table border="1">
+      <tr>
+	<th> Request type    </th>
+	<th> Key            </th>
+	<th> Description </th>
+      </tr>
+      <tr>
+	<td rowspan="4"> register        </td>
+	<td> imdbId         </td>
+	<td> IMDB movie identifier </td>
+      </tr>
+      <tr>
+	<td> availableSeats </td>
+	<td> Total seats available for this movie </td>                                                                                                                        
+      </tr>
+      <tr>
+	<td rowspan="2"> screenId       </td>
+	<td> Externally managed identifier of </td>                                                                                                                              
+      </tr>
+      <tr>
+	<td> when and where the movie is screened </td>
+      </tr>
+      <tr>
+	<td rowspan="3"> reserve         </td>
+	<td> imdbId         </td>
+	<td> IMDB movie identifier </td>
+      </tr>
+      <tr>
+	<td rowspan="2"> screenId       </td>
+	<td> Externally managed identifier of </td>
+      </tr>
+      <tr>
+	<td> when and where the movie is screened </td>
+      </tr>
+      <tr>
+	<td rowspan="3"> retrieve        </td>
+	<td> imdbId         </td>
+	<td> IMDB movie identifier </td>
+      </tr>
+      <tr>
+	<td rowspan="2"> screenId       </td>
+	<td> Externally managed identifier of </td>
+      </tr>
+      <tr>
+	<td> when and where the movie is screened</td>
+      </tr>
+    </table>
+    <h2>Responses</h2>
+    <table border="1">
+      <tr>
+	<th> Request type </th>
+	<th> Response                       </th>
+	<th> Description </th>
+      </tr>
+      <tr>
+	<td rowspan="5">register     </td>
+	<td> ok                             </td>
+	<td> Registration was successful   </td>
+      </tr>
+      <tr>
+	<td> {error, missing_fields}        </td>
+	<td> Fields missing in the request       </td>
+      </tr>
+      <tr>
+	<td> {error, not_allowed}           </td>
+	<td> Registration is not allowed       </td>
+      </tr>
+      <tr>
+	<td> {error, exists}                </td>
+	<td> Movie already exists                </td>
+      </tr>
+      <tr>
+	<td> {error, Error}                 </td>
+	<td> Registration failed </td>
+      </tr>
+      <tr>
+	<td rowspan="6"> reserve      </td>	
+	<td> ok                             </td>
+	<td> Reservation was successful   </td>
+      </tr>
+      <tr>
+	<td> {error, missing_fields}        </td>
+	<td> Fields missing in the request </td>                                                                                                                  
+      </tr>
+      <tr>
+	<td> {error, not_exists}            </td>
+	<td> Movie was not registered  </td>
+      </tr>
+      <tr>	
+	<td> {error, not_allowed}           </td>
+	<td> Reservation is not allowed                                                                                                             </td>
+      </tr>
+      <tr>
+	<td> {error, not_available}         </td><td> Seat not available for movie                                                                                                               </td></tr>
+      <tr>        
+	<td> {error, Error}                 </td><td> Reservation failed                                                                                                                          </td>
+      </tr>
+      <tr>
+	<td rowspan="12"> retrieve     </td>
+	<td> {ok,                           </td>
+	<td> Retrieval was successful                                                                                                                         </td>
+      </tr>
+      <tr>
+	<td> &nbsp;&nbsp;{"imdbId": "tt0111161",       </td><td> IMDB movie identifier                                                                                                                 </td>
+      </tr>
+      <tr>
+	<td>&nbsp;&nbsp;   "screenId": "screen_123456", </td><td> Externally managed identifier                                                                                                         </td></tr>
+      <tr>
+	<td>&nbsp;&nbsp;   "movieTitle": "The Movie",   </td><td> Movie title
+	</td>
+      </tr>
+      <tr>
+	<td> &nbsp;&nbsp;  "availableSeats": 100,       </td><td> Total seats available                                                                                                                         </td>
+      </tr>
+      <tr>       
+	<td>&nbsp;&nbsp;   "reservedSeats": 50          </td><td> Total seats reserved                                                                                                                  </td></tr>
+      <tr>
+	<td>&nbsp;&nbsp;  }                             </td><td>                                                                                                                                       </td></tr>
+      <tr>
+        
+	<td> }                              </td><td>                                                                                                                                       </td></tr>
+      <tr>
+	<td> {error, missing_fields}        </td><td> Fields missing in the request                                                                                                         </td></tr>
+      <tr>
+	<td> {error, not_exists}            </td><td> Movie was not registered                                                                                                          </td></tr>
+      <tr>        
+	<td> {error, not_allowed}           </td><td> Retrieval is not allowed                                                                                                                     </td></tr>
+      <tr>
+	<td> {error, Error}                 </td><td> Retrieval failed                                                                                                                      </td></tr>
+    </table>
+  </body>
+</html>

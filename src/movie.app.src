@@ -1,0 +1,18 @@
+{application, movie,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { movie_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    sasl,
+    cowboy
+   ]},
+  {env,[{movies_file_name, "movies.dets"}]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
