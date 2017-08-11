@@ -55,7 +55,7 @@ When the request is authorized, the result of the API is converted to JSON. A re
                       | imdbId         | IMDB movie identifier
       register        | availableSeats | Total seats available for this movie
                       | screenId       | Externally managed identifier of
-					  |                | when and where the movie is screened
+                      |                | when and where the movie is screened
      -----------------+----------------+---------------------------------------
                       | imdbId         | IMDB movie identifier
       reserve         | screenId       | Externally managed identifier of
@@ -71,7 +71,7 @@ When the request is authorized, the result of the API is converted to JSON. A re
       Request type | Response                       | Description
      ===========================================================================
                    | ok                             | Registration was successful
-				   | {error, missing_fields}        | Fields missing in the request
+                   | {error, missing_fields}        | Fields missing in the request
       register     | {error, not_allowed}           | Registration is not allowed
                    | {error, exists}                | Movie already exists
                    | {error, Error}                 | Registration failed
@@ -84,7 +84,7 @@ When the request is authorized, the result of the API is converted to JSON. A re
                    | {error, Error}                 | Reservation failed
      --------------+--------------------------------+-------------------------------
                    | {ok,                           | Retrieval was successful
-				   |  {"imdbId": "tt0111161",       | IMDB movie identifier
+                   				   |  {"imdbId": "tt0111161",       | IMDB movie identifier
 				   |   "screenId": "screen_123456", | Externally managed identifier
 				   |   "movieTitle": "The Movie",   | Movie title
 				   |   "availableSeats": 100,       | Total seats available
